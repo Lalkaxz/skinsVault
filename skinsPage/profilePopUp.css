@@ -1,0 +1,121 @@
+.profileContainer {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.profileContent {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 10px 30px;
+    overflow: hidden;
+    border: 3px solid #2d2d4d;
+    padding-bottom: 10px;
+}
+
+
+.profileClose {
+    width: 30px;
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+.profileClose:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.divProfileTable {
+    border: 1px solid #363658;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    display: flex;
+}
+
+.divNameProfile {
+    background-color: #2d3142;
+    border-radius: 6px;
+    height:40px;
+    width: 100%;
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#h1ProfileName {
+    padding-left: 10px;
+    border: none;
+}
+
+
+#formApi {
+    width: 75%;
+}
+
+.inputApi {
+    font-family: Quicksand, sans-serif;
+    padding: 7px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: #2d3142;
+    border: 2px solid rgba(0, 0, 0, 0.384);
+    border-radius: 7px;
+    color: rgb(196, 190, 190);
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.submitApi {
+    display: block;
+    font-size:20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #222533;
+    color: #F5F7F8;
+    border: none;
+    border-radius: 6px;
+    cursor:pointer;
+}
+
+.submitApi:hover{
+    background-color: #303342;
+}
+
+#h2ProfileMail {
+    font-size: 20px;
+    color: rgb(160, 154, 154);
+    font-weight: 500;
+}
+
+.divIconProfile{
+    align-items: flex-start;
+    display: flex;
+    width: 100px;
+    
+    
+}
+
+
+.profileIcon {
+    width: 100px;
+    height: 100px;
+}

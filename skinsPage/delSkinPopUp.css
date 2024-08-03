@@ -1,0 +1,89 @@
+.delSkinContainer {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.delSkinContent {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 30px 30px;
+    overflow: hidden;
+    border: 3px solid black;
+    padding-bottom: 10px;
+}
+
+button.delSkinClose {
+    width: 30px;
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+}
+
+button.delSkinClose:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+
+#formDelSkin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    overflow: hidden;
+}
+
+.delSkinInputs {
+    font-family: Quicksand, sans-serif;
+    padding: 7px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: #e9ecef;
+    border: 2px solid rgba(0, 0, 0, 0.384);
+    border-radius: 7px;
+    width: 100%;
+    text-align: center;
+}
+
+.delSkinInputs[validErr = ""] {
+    border: 2px solid rgb(238, 115, 115);
+}
+
+#h1DelSkin {
+    width: 100%;
+}
+
+#submitDelSkin {
+    display: block;
+    font-size:20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #419152;
+    color: #F5F7F8;
+    border: none;
+    border-radius: 6px;
+    cursor:pointer;
+}
+
+#submitDelSkin:hover {
+    background-color: #59be6e;
+}

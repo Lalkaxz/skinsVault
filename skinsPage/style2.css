@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Century_Gothic";
+    src: url(/other/Century_Gothic.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+
+
+body {
+    background-color: #12161A;
+    font-family: Quicksand, sans-serif;
+    color: #F5F7F8;
+}
+
+.container {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+#popUpContainer {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 30px 30px;
+    overflow: hidden;
+    border: 3px solid black;
+    padding-bottom: 10px;
+}
+
+
+
+#formAddSkin {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 30px;
+    overflow: hidden;
+
+
+}
+
+button.close {
+    width: 30px;
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+
+}
+
+button.close:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.divSelectForm {
+    display: flex;
+}
+
+
+.choiceForm {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.popUpInputs {
+    font-family: Quicksand, sans-serif;
+    padding: 7px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: #e9ecef;
+    border: 3px solid rgba(0, 0, 0, 0.384);
+    border-radius: 7px;
+    width: 75%;
+    text-align: center;
+}
+
+.popUpInputs:disabled {
+    border: none;
+    cursor: not-allowed;
+}
+
+#inputNick[validError = ""] {
+    border: 2px solid rgb(238, 115, 115);
+}
+
+#nameSkin[validError = ""] {
+    border: 2px solid rgb(238, 115, 115);
+}
+
+.divSelectForm[validError = ""] {
+    border: 2px solid rgb(238, 115, 115);
+    border-radius: 6px;
+    
+}
+
+#divOR[validError = ""] {
+    color: rgb(238, 115, 115);
+}
+
+#submitAddSkin {
+    display: block;
+    margin-top: 9%;
+    font-size:20px;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #419152;
+    color: #F5F7F8;
+    border: none;
+    border-radius: 6px;
+    cursor:pointer;
+}
+
+#submitAddSkin:hover {
+    background-color: #59be6e;
+}
+
+
+
+#divOR::after {
+    content: "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯";
+    height: 1px;
+}
+
+#divOR::before {
+    content: "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯";
+    height: 1px;
+}
+
+#divOR {
+    font-size: 30px;
+}
+
+
+#inputNick {
+    width: 100%;
+}
+
+h1 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.384);
+    width: calc(100% + 30px);
+     
+}
+
+.hrPopUp {
+    width: calc(100% + 30px);
+    background-color: rgba(0, 0, 0, 0.384);
+    border: none;
+    height: 2px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+
+[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    color: #F5F7F8;
+    left: -10px; top: 30px;
+    z-index: 1; 
+    background: #14213d; 
+    padding: 10px 0px; 
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: default;
+    font-family: QuickSand, sans-serif;
+    font-size: 12px;
+    width: 175px;
+}
+
+
+.input-file {
+	margin-top: 3%;
+    position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #419152;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+    margin-top: 10px;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+
+.input-file input[type=file]:focus + span {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.input-file:hover span {
+    background-color: #59be6e;
+}
+.input-file:active span {
+	background-color: #2E703A;
+}
+ 
+.input-file input[type=file]:disabled + span {
+    background-color: #eee;
+    cursor: not-allowed;
+    
+}
+
+.dropdown-content a {
+    color: #F5F7F8;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #373A40;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    border-bottom-left-radius: 7px;
+}
+
+li.dropdown {
+    float: right;
+}
+
+.logout {
+    border-top: 2px solid #6c757d;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #F5F7F8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#a7a7a7;
+}
+  
+.active {
+    background-color: #0b4f8b;
+}
+
+.divSkinTable {
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 2px solid #495057;
+    display: flex;
+
+}
+
+
+
+
+.skinImg{
+    width: 150px;
+    height: auto;
+    padding: 10%;
+}
+
+
+#divShowImg {
+    position: absolute;
+    display: none; /*inline*/
+    padding-left: 10px;
+}
+
+.clearFile {
+    float: right;
+    cursor: pointer;
+    color: red;
+}
+
+#showImg {
+    width: 50px;
+    height: 50px;
+}
+
+
+.NameItem {
+    color: #F5F7F8;
+    text-align: center;
+    height: 25px;
+    font-weight: 600;   
+    padding-top: 5px;
+}
+
+.InteractBtns {
+    height: 30px;
+    color: #F5F7F8;
+    background-color: rgb(43, 48, 53);
+    justify-content: center;
+    display: flex;
+}
+
+
+.hrSkin {
+    height: 2px;
+    background-color: #495057;
+    border: none;
+}
+
+.num {
+    position:absolute;
+    left: 5px;
+    top: 3px;
+}
+
+.divSkinImg {
+    display: flex;
+    align-items: center;
+    height: 301.94px;
+    background: url(/other/background.png);
+    position: relative;
+    
+}
+
+#uploadSkin {
+    width: 100%;
+}
+
+
+.item {
+    border: 1px solid #6c757d;
+    margin: 10px 9.5px;
+    display: table;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 8.88%;
+    border-radius: 6px;
+}
+
+.skinButtons {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2.5px;
+    background-color: rgb(43, 48, 53);
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.userIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    float: right;
+    margin-left: 5px;
+    filter: invert();
+}
+
+.logoutIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    float: right;
+    margin-left: 5px;
+    
+}
+
+.InteractIcons {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    filter: invert();
+}
